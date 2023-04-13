@@ -32,7 +32,8 @@ client.on("interactionCreate", (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === "add") {
-    const num1 = interaction.options.get("first-number")?.value;
+    // add command --> find sum
+    const num1 = interaction.options.get("first-number")?.value; // get value from option
     const num2 = interaction.options.get("second-number")?.value;
     interaction.reply(`The sum is ${num1 + num2}`);
   }

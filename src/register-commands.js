@@ -6,11 +6,13 @@ const commands = [
     name: "add",
     description: "Adds two numbers.",
     options: [
+      //option
       {
         name: "first-number",
         description: "The first number.",
-        type: ApplicationCommandOptionType.Number,
+        type: ApplicationCommandOptionType.Number, // must set type to number
         choices: [
+          // option
           {
             name: "1",
             value: 1,
