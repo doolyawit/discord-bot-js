@@ -11,7 +11,7 @@ const commands = [
     description: "Pong!",
   },
 ];
-const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
+const rest = new REST({ version: "10" }).setToken(process.env.TOKEN); //REST API
 
 (async () => {
   try {
@@ -27,4 +27,4 @@ const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
   } catch (error) {
     console.log(`There was an error : ${error}`);
   }
-})(); //register / command
+})(); //register /[slash] command

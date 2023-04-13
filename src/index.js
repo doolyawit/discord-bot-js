@@ -28,6 +28,7 @@ client.on("messageCreate", (message) => {
 });
 
 client.on("interactionCreate", (interaction) => {
+  // event when hit /
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === "hey") {
