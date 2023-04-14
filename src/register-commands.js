@@ -11,44 +11,19 @@ const commands = [
         name: "first-number",
         description: "The first number.",
         type: ApplicationCommandOptionType.Number, // must set type to number
-        choices: [
-          // option
-          {
-            name: "1",
-            value: 1,
-          },
-          {
-            name: "2",
-            value: 2,
-          },
-          {
-            name: "3",
-            value: 3,
-          },
-        ],
         required: true,
       },
       {
         name: "second-number",
         description: "The second number.",
         type: ApplicationCommandOptionType.Number,
-        choices: [
-          {
-            name: "1",
-            value: 1,
-          },
-          {
-            name: "2",
-            value: 2,
-          },
-          {
-            name: "3",
-            value: 3,
-          },
-        ],
         required: true,
       },
     ],
+  },
+  {
+    name: "embed",
+    description: "Sends an embed!",
   },
 ];
 const rest = new REST({ version: "10" }).setToken(process.env.TOKEN); //REST API
@@ -63,7 +38,7 @@ const rest = new REST({ version: "10" }).setToken(process.env.TOKEN); //REST API
       ),
       { body: commands }
     );
-    console.log("Slash commands weew registered successfully!");
+    console.log("Slash commands were registered successfully!");
   } catch (error) {
     console.log(`There was an error : ${error}`);
   }
